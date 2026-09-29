@@ -1,0 +1,18 @@
+{
+  "$schema": "./.dt-app/app.config.schema.json",
+  "environmentUrl": "https://your-tenant.apps.dynatrace.com/",
+  "app": {
+    "name": "AI Agent Replay",
+    "version": "0.0.0",
+    "description": "Scrubbable session-replay for AI agents: timeline, topology and token spend.",
+    "id": "my.ai.agent.replay",
+    "scopes": [
+      { "name": "storage:spans:read", "comment": "read GenAI/agent spans from Grail" },
+      { "name": "storage:bizevents:read", "comment": "read evaluation bizevents" },
+      { "name": "storage:entities:read", "comment": "read Smartscape GenAI entities" },
+      { "name": "storage:buckets:read", "comment": "required to query Grail buckets" },
+      { "name": "state:app-states:read", "comment": "read saved model prices / preferences" },
+      { "name": "state:app-states:write", "comment": "save model prices / preferences" }
+    ]
+  }
+}
